@@ -1,0 +1,14 @@
+body{
+    font-size: 11pt;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.75em;
+    overflow-x: hidden;
+    opacity: 1;
+}
+.top-line .logo{
+    display: inline-block;
+}
+.top-line h1{
+    display: inline-block;
+}
