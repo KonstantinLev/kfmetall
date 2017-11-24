@@ -114,7 +114,7 @@ header{
 }
 .top-menu{
     text-align: center;
-    background-color: #4c4e50;
+    background-color: rgba(76, 78, 80, 0.7);;
     padding: 15px 0;
 }
 .top-menu ul{
@@ -150,6 +150,9 @@ header{
 .block-callback h1{
     margin: 0 0 35px 0;
 }
+.block-callback a{
+    color: #333;
+}
 .block-callback .labeled-input input:focus + .label-placeholder {
     bottom: 30px;
     cursor: default;
@@ -177,6 +180,9 @@ header{
 .block-short-descr .info{
     font-size: 1.5em;
 }
+.block-short-descr ul{
+    padding: 0;
+}
 .block-short-descr ul li{
     list-style-type: none;
     margin-bottom: 10px;
@@ -186,6 +192,11 @@ header{
     color: #5b8fe2;
     font-size: 2em;
     padding: 0 10px 0 0;
+}
+.block-short-descr .privilege{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.2em;
 }
 /*-----------------------------------------------------------modal----------------------------------------------------*/
 .mm-slideout { z-index:auto!important;}
