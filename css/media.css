@@ -1,6 +1,13 @@
 /*==========  Desktop First (max-width)  ==========*/
 /*Правило применяется к браузеру, ширина которого меньше значения, указанного в запросе.*/
 
+@media only screen and (max-width : 1470px){
+    /**/
+    .all-rf{
+        right: 0;
+    }
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px){
     /**/
