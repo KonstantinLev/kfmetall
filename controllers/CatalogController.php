@@ -87,6 +87,7 @@ class CatalogController extends Controller
     {
         $getData = Yii::$app->request->get();
         $product = Product::getProductById($getData['id']);
+        if(empty($product)) return $this->redirect(Yii::$app->homeUrl);
         return $this->render('product', [
             'product' => $product
         ]);

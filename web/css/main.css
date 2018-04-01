@@ -49,6 +49,32 @@ header{
 #my-footer{
     position: relative;
 }
+footer{
+    background-color: #333;
+    color: whitesmoke;
+    padding: 10px 0;
+}
+.f-block-1, .f-block-2{
+    text-align: center;
+    position: relative;
+    top: 37px;
+}
+.f-block-1 .logo{
+    float: left;
+}
+.f-block-1 h3{
+    position: relative;
+    top: 13px;
+}
+.f-block-3 ul{
+   padding: 0;
+   list-style-type: none;
+    font-size: 11px;
+
+}
+.underline{
+    text-decoration: underline;
+}
 .btn-main{
     color: whitesmoke;
     background-color: #5cb0e2;

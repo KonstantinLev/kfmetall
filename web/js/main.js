@@ -25,6 +25,13 @@ $(document).ready(function() {
         }
     });
 
+    $('.left-menu a').each(function () {
+        var location = window.location.href;
+        var link = this.href;
+        if(location == link) {
+            $(this).parent().addClass('active');
+        }
+    });
 
     $('#callback').modal({show: false, backdrop: 'static'});
 
@@ -47,6 +54,11 @@ $(document).ready(function() {
                 }
             }
         });
+    });
+
+    $('.left-menu a').click(function() {
+        $('.left-menu li').removeClass('active');
+        $(this).parent().addClass('active');
     });
 
 });

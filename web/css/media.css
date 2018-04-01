@@ -22,6 +22,12 @@
     .top-line .descr p{
         line-height: 1.3em;
     }
+    .f-block-1, .f-block-2{
+        top: 0;
+    }
+    .f-block-1 h3{
+        top: 0;
+    }
 }
 
 

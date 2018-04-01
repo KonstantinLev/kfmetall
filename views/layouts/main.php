@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use app\models\Category;
 use app\widgets\Alert;
 use yii\bootstrap\Modal;
 use yii\helpers\Html;
@@ -51,10 +52,14 @@ AppAsset::register($this);
             <nav id="my-menu">
                 <ul>
                     <li><?=Html::a('Главная', Yii::$app->homeUrl)?></li>
-                    <li><?=Html::a('Каталог', ['catalog/index'])?></li>
+                    <li>
+                        <?=Html::a('Каталог', ['catalog/index'])?>
+                        <?=Category::drawLeftMenu()?>
+                    </li>
                     <li><?=Html::a('О компании', ['about/index'])?></li>
                     <li><?=Html::a('Контакты', ['contact/index'])?></li>
                 </ul>
+                <?=Category::drawLeftMenu()?>
             </nav>
             <div class="top-line">
                 <div class="container">
@@ -102,6 +107,7 @@ AppAsset::register($this);
                         <li><?=Html::a('Контакты', ['contact/index'])?></li>
                     </ul>
                 </div>
+
             </div>
         </header>
     </div>
@@ -111,11 +117,42 @@ AppAsset::register($this);
         </div>
     </div>
     <div id="my-footer">
-        <?php if(Yii::$app->controller->id == 'site') { ?>
-
-        <?php } else { ?>
+        <?php if(Yii::$app->controller->id != 'site') { ?>
             <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="f-block-1">
+                                <div class="logo"><?=Html::img('@web/img/logo.png', ['alt' => Yii::$app->name])?></div>
+                                <h3>KF Metall</h3>
+                            </div>
 
+                        </div>
+                        <div class="col-md-3">
+                            <div class="f-block-2">
+                                <div class="phone">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>8 (888) 888-88-88</span>
+                                </div>
+                                <div class="email">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>kfmetall@yandex.ru</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="f-block-3">
+                                <ul>
+                                    <li><span class="underline">Полное наименование фирмы:</span> Общество с ограниченной ответственностью "Строй-Инвест"</li>
+                                    <li><span class="underline">Юридический адрес:</span> 215113, Смоленская обл., г. Вязьма, ул. 2-я Бозня, д.2, стр. 2</li>
+                                    <li><span class="underline">ОГРН клиента:</span> 1126722000283</li>
+                                    <li><span class="underline">ИНН:</span> 6722027281</li>
+                                    <li><span class="underline">КПП:</span> 672201001</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </footer>
         <?php } ?>
     </div>

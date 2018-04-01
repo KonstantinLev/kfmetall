@@ -75,7 +75,7 @@ class Category extends \yii\db\ActiveRecord
         $data = Category::find()->all();
         $result = '';
         foreach ($data as $item){
-            $result .= '<div class="col-md-6">';
+            $result .= '<div class="col-md-6 col-sm-6">';
             $result .= '<div class="block-product">';
             $result .= Html::a(Html::img('@web/img/'.$item->img_path, ['alt' => $item->title]).'<span>'.$item->title.'</span>', ['catalog/'.$item->id], ['title' => $item->title]);
             $result .= '</div>';

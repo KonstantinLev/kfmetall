@@ -97,10 +97,4 @@ class Product extends \yii\db\ActiveRecord
         }
         return $result;
     }
-
-    public static function drawProduct($id)
-    {
-        $data = self::getProductById($id);
-    }
-
 }

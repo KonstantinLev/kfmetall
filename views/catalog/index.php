@@ -11,10 +11,10 @@ $this->title = Yii::$app->name.' | Каталог';
 <div class="container">
     <div class="row">
         <div class="block-catalog">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3 hidden-xs">
                 <?=Category::drawLeftMenu()?>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 col-sm-9">
                 <div class="row">
                     <?=Breadcrumbs::widget(['homeLink' => ['label' => 'Главная', 'url' => Yii::$app->homeUrl], 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],])?>
                     <?=Category::drawCatalog()?>
