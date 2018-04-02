@@ -11,6 +11,7 @@ use Yii;
  * @property string $phone
  * @property string $name
  * @property string $created_at
+ * @property string $result_send
  */
 class Application extends \yii\db\ActiveRecord
 {
@@ -29,7 +30,7 @@ class Application extends \yii\db\ActiveRecord
     {
         return [
             [['created_at'], 'safe'],
-            [['phone', 'name'], 'string', 'max' => 4000],
+            [['phone', 'name', 'result_send'], 'string', 'max' => 4000],
         ];
     }
 
@@ -43,6 +44,28 @@ class Application extends \yii\db\ActiveRecord
             'phone' => 'Phone',
             'name' => 'Name',
             'created_at' => 'Created At',
+            'result_send' => 'result_send',
         ];
+    }
+
+    public function sendAppOnMail()
+    {
+        $to = Yii::$app->params['kfMetalEmail'];
+        $subject = 'Новые обращение с сайта kfmetall.ru';
+        $message = '<html>
+            <head>
+            </head>
+            <body>
+                Оформлено новое обращение с сайта kfmetall.ru. Номер телефона клиента - <b>'.$this->phone.'</b>
+            </body></html>';
+        $headers[] = 'Content-type: text/html; charset=utf-8';
+        $headers[] = 'From: order@kfmetall.ru';
+
+        $result = mail($to, $subject, $message, implode("\r\n",$headers));
+        if (!$result) {
+            $result =  error_get_last()['message'];
+        }
+        $this->result_send = $result;
+        $this->save();
     }
 }

@@ -71,8 +71,16 @@ class SiteController extends Controller
         }
     }
 
-    public function actionSaveCallback()
+    public function actionCompleted()
     {
-        return $this->redirect(Yii::$app->homeUrl);//TODO доделать релирект на страницу специальную
+        $data = Yii::$app->request->post();
+        if ($data){
+            $model = new Application();
+            $model->load($data);
+            $model->save();
+            $model->sendAppOnMail();
+            return $this->render('completed');
+        }
+        return $this->redirect(Yii::$app->homeUrl);
     }
 }

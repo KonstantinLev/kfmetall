@@ -77,7 +77,7 @@ AppAsset::register($this);
                             <div class="contacts">
                                 <div class="phone">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>8 (888) 888-88-88</span>
+                                    <a href="tel:+79529992323"><span>+7 (952) 999-23-23</span></a>
                                 </div>
                                 <div class="email">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -118,7 +118,7 @@ AppAsset::register($this);
     </div>
     <div id="my-footer">
         <?php if(Yii::$app->controller->id != 'site') { ?>
-            <footer>
+            <footer class="<?=(Yii::$app->controller->id == 'site' || Yii::$app->controller->id == 'catalog') ? '' : 'f-special'?>">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
@@ -132,7 +132,7 @@ AppAsset::register($this);
                             <div class="f-block-2">
                                 <div class="phone">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>8 (888) 888-88-88</span>
+                                    <a href="tel:+79529992323"><span>+7 (952) 999-23-23</span></a>
                                 </div>
                                 <div class="email">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>

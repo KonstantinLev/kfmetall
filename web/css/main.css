@@ -48,6 +48,11 @@ header{
 }
 #my-footer{
     position: relative;
+    z-index: 2;
+}
+.phone a{
+    text-decoration: none;
+    color: whitesmoke;
 }
 footer{
     background-color: #333;
@@ -334,8 +339,13 @@ footer{
 .block-catalog{
     padding: 15px 0 0 0;
 }
-.left-menu{
-
+.left-menu li.active{
+    background-color: #a9a9a9;
+}
+.left-menu li.active a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 5px;
 }
 .left-menu ul{
     padding: 0;
@@ -418,8 +428,6 @@ footer{
 }
 .block-profile-product .photo{
     display: inline-block;
-    width: 90px;
-    height: 90px;
     text-align: center;
 }
 .block-profile-product .photo img{
@@ -428,4 +436,24 @@ footer{
 }
 .block-profile-product .descr{
     display: inline-block;
+}
+.f-special{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.block_completed{
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
+.about_block, .contact_block{
+    padding: 0 0 250px 0;
+}
+.contact_block a{
+    color: #333;
+}
+.contact_block .block-callback{
+    background-color: rgba(78, 147, 188, 0.8);
 }

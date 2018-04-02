@@ -2,6 +2,9 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Url;
+use yii\widgets\ActiveForm;
+
 $this->title = Yii::$app->name;
 ?>
 <div class="container">
@@ -26,9 +29,13 @@ $this->title = Yii::$app->name;
         <div class="col-md-5">
             <div class="block-callback">
                 <h1 class="text-center">Обратная связь</h1>
-                <form method="post">
+                <?php
+                $form = ActiveForm::begin([
+                    'enableAjaxValidation' => true,
+                    'action' => ['site/completed'],
+                ]); ?>
                     <div class="form-group labeled-input">
-                        <input id="phone" name="contacts" placeholder="телефон" required>
+                        <input id="phone" name="Application[phone]" placeholder="телефон" required>
                         <label for="phone" class="label-placeholder">Как с Вами связаться?</label>
                     </div>
                     <div class="form-group">
@@ -41,9 +48,8 @@ $this->title = Yii::$app->name;
                     <div class="form-group">
                         <input type="submit" class="btn-main center-block" value="Отправить">
                     </div>
-                </form>
+                <?php ActiveForm::end(); ?>
             </div>
-
         </div>
     </div>
 </div>

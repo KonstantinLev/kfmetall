@@ -10,7 +10,7 @@ $form = ActiveForm::begin([
     'id' => 'callback_form',
     'layout' => 'horizontal',
     'enableAjaxValidation' => true,
-    'action' => ['site/save-callback'],
+    'action' => ['site/completed'],
 ]); ?>
 
 <div class="form-group labeled-input">
