@@ -127,6 +127,9 @@ footer{
     position: relative;
     z-index: 1;
 }
+.content{
+    padding-top: 20px;
+}
 .content.home{
 
 }
@@ -449,7 +452,7 @@ footer{
     text-align: center;
 }
 .about_block, .contact_block{
-    padding: 0 0 250px 0;
+    padding: 0 0 350px 0;
 }
 .contact_block a{
     color: #333;
