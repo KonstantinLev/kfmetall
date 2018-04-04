@@ -15,6 +15,10 @@ $this->title = Yii::$app->name.' | Контакты';
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <a href="tel:+79529992323"><span>+7 (952) 999-23-23</span></a>
                 </div>
+                <div class="phone">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <a href="tel:+74813150751"><span>8 (48131) 5-07-51</span></a>
+                </div>
                 <div class="email">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     <span>kfmetall@yandex.ru</span>

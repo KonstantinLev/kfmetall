@@ -70,7 +70,7 @@ AppAsset::register($this);
                         <div class="col-sm-4 col-md-5 col-lg-5">
                             <div class="descr">
                                 <h1>KF Metall</h1>
-                                <p>Широкий спектр электромонтажной продукции</p>
+                                <p>Широкий выбор профиля и комплектующих</p>
                             </div>
                         </div>
                         <div class="col-sm-3 col-md-3 col-lg-3">
@@ -118,7 +118,7 @@ AppAsset::register($this);
     </div>
     <div id="my-footer">
         <?php if(Yii::$app->controller->id != 'site') { ?>
-            <footer class="<?=(Yii::$app->controller->id == 'site' || Yii::$app->controller->id == 'catalog') ? '' : 'f-special'?>">
+            <footer class="<?=(Yii::$app->controller->id == 'site' || Yii::$app->controller->id == 'catalog') ? '' : ''?>">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
