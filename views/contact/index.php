@@ -44,7 +44,6 @@ $this->title = Yii::$app->name.' | Контакты';
                 <p>Схема проезда</p>
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5fbe41203836f646b405406d370797b30484220d9195fbd0166fb829053efc39&amp;width=100%&amp;height=562&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
-
         </div>
     </div>
 </div>

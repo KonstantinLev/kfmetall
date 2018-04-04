@@ -26,7 +26,7 @@ $this->title = Yii::$app->name;
                 </ul>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 hidden-xs">
             <div class="block-callback">
                 <h1 class="text-center">Обратная связь</h1>
                 <?php
