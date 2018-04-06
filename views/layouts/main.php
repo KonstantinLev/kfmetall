@@ -118,7 +118,7 @@ AppAsset::register($this);
     </div>
     <div id="my-footer">
         <?php if(Yii::$app->controller->id != 'site') { ?>
-            <footer class="<?=(Yii::$app->controller->id == 'site' || Yii::$app->controller->id == 'catalog') ? '' : ''?>">
+            <footer>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">

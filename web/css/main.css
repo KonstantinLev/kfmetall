@@ -1,5 +1,12 @@
-html, body, #my-page, .mm-page{
+html, body, .mm-page{
     height: 100%;
+}
+#my-page{
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 280px;
 }
 h1, h2, h3, h4{
     margin: 0;
@@ -20,7 +27,6 @@ header nav#my-menu{
     position: relative;
     color: whitesmoke;
     z-index: 1;
-    min-height: 700px
 }
 .home#my-page::before{
     content: '';
@@ -47,8 +53,11 @@ header{
     z-index: 1;
 }
 #my-footer{
-    position: relative;
+    /*position: relative;*/
     z-index: 2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .phone a{
     text-decoration: none;
@@ -450,9 +459,6 @@ footer{
 }
 .center{
     text-align: center;
-}
-.about_block, .contact_block{
-    padding: 0 0 350px 0;
 }
 .contact_block a{
     color: #333;
