@@ -20,14 +20,14 @@ $form = ActiveForm::begin([
 <div class="form-group">
     <i>
         Заполняя данную форму, вы принимаете условия
-        <a href="policy" target="_blank">Соглашения об использовании сайта</a>, в том
+        <a href="<?=\yii\helpers\Url::to(['policy/index'])?>" target="_blank">Соглашения об использовании сайта</a>, в том
         числе в части обработки и использования персональных данных
     </i>
 </div>
 
 <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-9">
-        <?= Html::submitButton('Отправить', ['class' => 'btn-main center-bloc']) ?>
+    <div class="col-sm-12">
+        <?= Html::submitButton('Отправить', ['class' => 'btn-main center-block']) ?>
     </div>
 </div>
 

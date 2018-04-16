@@ -37,7 +37,7 @@ header nav#my-menu{
     bottom: 0;
     background-color: #333;
     z-index: 0;
-    opacity: .4;
+    opacity: .6;
 }
 body{
     font-size: 11pt;
@@ -187,7 +187,6 @@ footer{
 .top-menu ul li a{
     font-size: 1.5em;
     color: whitesmoke;
-    text-decoration: underline;
     padding: 15px 30px;
     border: 2px solid transparent;
     -webkit-transition: all .3s ease;
@@ -199,10 +198,17 @@ footer{
 .top-menu ul li a:hover{
     border: 2px solid #4e93bc;
     color: #4e93bc;
+    text-decoration: none;
 }
 .top-menu ul li a.active{
     border: 2px solid #4e93bc;
     color: #4e93bc;
+    text-decoration: none;
+}
+.top-menu ul li a:focus{
+    border: 2px solid #4e93bc;
+    color: #4e93bc;
+    text-decoration: none;
 }
 #callback{
     display: none;
@@ -466,4 +472,7 @@ footer{
 }
 .contact_block .block-callback{
     background-color: rgba(78, 147, 188, 0.8);
+}
+.img-partner{
+    max-width: 100%;
 }

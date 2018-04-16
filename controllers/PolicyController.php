@@ -6,7 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 
-class ProductController extends Controller
+class PolicyController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -50,7 +50,7 @@ class ProductController extends Controller
         ];
     }
 
-    public function actionIndex($id)
+    public function actionIndex()
     {
         return $this->render('index');
     }

@@ -35,7 +35,7 @@ AppAsset::register($this);
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= Html::encode($this->title)?></title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -124,7 +124,7 @@ AppAsset::register($this);
                         <div class="col-md-3">
                             <div class="f-block-1">
                                 <div class="logo"><?=Html::img('@web/img/logo.png', ['alt' => Yii::$app->name])?></div>
-                                <h3>KF Metall</h3>
+                                <h3>KF Metall &copy;</h3>
                             </div>
 
                         </div>

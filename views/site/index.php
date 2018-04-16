@@ -5,7 +5,11 @@
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
-$this->title = Yii::$app->name;
+$this->title = Yii::$app->name.' | широкий выбор профиля и комплектующих';
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => 'Компания '.Yii::$app->name.'. Широкий выбор профиля и комплектующих, производство профиля для гипсокартона, перфорированного металлического крепежа и комплектующих'
+]);
 ?>
 <div class="container">
     <div class="row">
@@ -20,9 +24,6 @@ $this->title = Yii::$app->name;
                     <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Вы получаете продукцию высокого качества по конкурентоспособной цене;</li>
                     <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Вся продукция соответствует действующим стандартам и техническим условиям;</li>
                     <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Индивидуальный подход к каждому заказчику повышает эффективность сотрудничества;</li>
-                    <!--<li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Благодаря удобной системе скидок партнёрство становится более выгодным;</li>-->
-                    <li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Кротчайшие сроки изготовления сводят время поставки до минимума;</li>
-                    <!--<li><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Квалифицированные специалисты помогут решить любые технические вопросы, сэкономив ваше время;</li>-->
                 </ul>
             </div>
         </div>

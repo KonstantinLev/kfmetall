@@ -5,6 +5,10 @@
 use yii\widgets\ActiveForm;
 
 $this->title = Yii::$app->name.' | Контакты';
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => 'Компания '.Yii::$app->name.'Как найти, проезд, телефоны, email, форма обратной связи'
+]);
 ?>
 <div class="contact_block">
     <div class="container">
@@ -37,6 +41,13 @@ $this->title = Yii::$app->name.' | Контакты';
                     <div class="form-group labeled-input">
                         <input id="phone" name="Application[phone]" placeholder="телефон" required>
                         <label for="phone" class="label-placeholder">Как с Вами связаться?</label>
+                    </div>
+                    <div class="form-group">
+                        <i>
+                            Заполняя данную форму, вы принимаете условия
+                            <a href="<?=\yii\helpers\Url::to(['policy/index'])?>" target="_blank">Соглашения об использовании сайта</a>, в том
+                            числе в части обработки и использования персональных данных
+                        </i>
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn-main center-block" value="Отправить">

@@ -9,7 +9,11 @@ use yii\widgets\Breadcrumbs;
 $this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => Url::toRoute(['catalog/index'])];
 $this->params['breadcrumbs'][] = ['label' => $product->category->title, 'url' => Url::toRoute(['catalog/'.$product->category->id])];
 $this->params['breadcrumbs'][] = $product->title;
-$this->title = Yii::$app->name.' | '.$product->title;
+$this->title = Yii::$app->name.' | '.$product->category->title.' | '.$product->title;
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => 'Компания '.Yii::$app->name.'. Каталог товаров, '.$product->category->title.', '.$product->title
+]);
 ?>
 <div class="container">
     <div class="row">
