@@ -6,6 +6,9 @@
     .all-rf{
         right: 0;
     }
+    .home#my-page{
+        padding-bottom: 0;
+    }
 }
 
 /* Large Devices, Wide Screens */
@@ -28,6 +31,9 @@
     .f-block-1 h3{
         top: 0;
     }
+    .content.home{
+        margin: 0;
+    }
 }
 
 
@@ -40,6 +46,9 @@
     .content.home{
         margin: 0;
     }
+    .home#my-page{
+        padding-bottom: 280px;
+    }
 }
 
 @media only screen and (max-width : 501px){
@@ -50,7 +59,9 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
-    /**/
+    #my-page{
+        padding-bottom: 280px;
+    }
 }
 
 @media only screen and (max-width: 450px) {

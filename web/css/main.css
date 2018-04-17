@@ -27,6 +27,7 @@ header nav#my-menu{
     position: relative;
     color: whitesmoke;
     z-index: 1;
+    padding-bottom: 280px;
 }
 .home#my-page::before{
     content: '';
